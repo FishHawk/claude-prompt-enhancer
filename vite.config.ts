@@ -1,11 +1,32 @@
-import path from 'path';
-import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import monkey, { cdn } from 'vite-plugin-monkey';
+import path from 'path';
+import AutoImport from 'unplugin-auto-import/vite';
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
+import Components from 'unplugin-vue-components/vite';
+import { defineConfig } from 'vite';
+import monkey, { cdn, util } from 'vite-plugin-monkey';
 
 export default defineConfig({
   plugins: [
     vue(),
+    AutoImport({
+      dts: true,
+      imports: [
+        'vue',
+        {
+          'naive-ui': [
+            'useDialog',
+            'useMessage',
+            'useNotification',
+            'useLoadingBar',
+          ],
+        },
+        util.unimportPreset,
+      ],
+    }),
+    Components({
+      resolvers: [NaiveUiResolver()],
+    }),
     monkey({
       entry: 'src/main.ts',
       userscript: {

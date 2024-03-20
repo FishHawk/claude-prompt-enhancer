@@ -1,15 +1,27 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { SettingsOutline } from '@vicons/ionicons5';
 
-<template>test</template>
+import CommandEditor from '@/ui/CommandEditor.vue';
 
-<style>
-#cpe-app {
-  position: fixed;
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  z-index: 3;
-  top: 0;
-  left: 0;
-}
-</style>
+const getButtonRight = () => {
+  const isChatsPage = window.location.pathname === '/chats';
+  return isChatsPage ? '40px' : '110px';
+};
+const buttonRight = ref(getButtonRight());
+
+const showCommandEditor = ref(false);
+</script>
+
+<template>
+  <n-button
+    secondary
+    circle
+    style="position: fixed; top: 10px; z-index: 100; width: 44px; height: 44px"
+    :style="{ right: buttonRight }"
+    @click="showCommandEditor = true"
+  >
+    <n-icon :component="SettingsOutline" :size="20" />
+  </n-button>
+
+  <command-editor v-model:show="showCommandEditor" />
+</template>
