@@ -44,7 +44,7 @@ export default defineConfig({
           'zh-TW': '通過自定義命令使用預定義的提示',
         },
         namespace: 'https://github.com/FishHawk',
-        version: '2024.03.14',
+        version: '2024.03.21',
         match: ['https://claude.ai/chat*'],
         license: 'GPL-3.0',
         supportURL:
