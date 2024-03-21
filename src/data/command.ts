@@ -1,11 +1,11 @@
-import { Store } from './store';
+import { repeat } from '@/util';
 
-const delay = (ms: number) => new Promise((r) => setTimeout(r, ms));
+import { Store } from './store';
 
 const observeUserInput = async () => {
   let content = '';
-  while (true) {
-    await delay(100);
+
+  return repeat(200, () => {
     const input = document.querySelector("div[enterkeyhint='enter']");
     if (input !== null) {
       const newContent = input.textContent;
@@ -20,7 +20,7 @@ const observeUserInput = async () => {
         }
       }
     }
-  }
+  });
 };
 
 const applyCommand = (input: Element, prompt: string) => {
