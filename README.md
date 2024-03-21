@@ -1,9 +1,19 @@
-# claude-predefined-prompt
+# Claude Prompt Enhancer
 
-这是一个浏览器扩展插件，在 Claude 的输入框里面使用预定义的 Prompt。例如，输入`/commit`加空格，就会自动替换为`请帮我写一条Git commit message，内容是：`。
+English | [中文](/README.zh-CN.md)
 
-[点此安装](https://greasyfork.org/zh-CN/scripts/489838)
+The Claude Prompt Enhancer allows you to quickly insert predefined prompts when using Claude. Simply type a slash command followed by a space in the input box, and the corresponding prompt will automatically expand. For example, typing `/commit` and pressing the space will replace it with `Please help me write a Git commit message with the content:`.
 
-| 指令 /commit                                                                                                       | 生成的 Prompt                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| ![before](https://raw.githubusercontent.com/FishHawk/claude-predefined-prompt/main/.github/screenshot/before.webp) | ![after](https://raw.githubusercontent.com/FishHawk/claude-predefined-prompt/main/.github/screenshot/after.webp) |
+[Click here to install](https://greasyfork.org/zh-CN/scripts/489838)
+
+| Input command /commit                                                                                                 | Generated Prompt                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| ![before](https://raw.githubusercontent.com/FishHawk/claude-prompt-enhancer/main/.github/screenshot/before.webp) | ![after](https://raw.githubusercontent.com/FishHawk/claude-prompt-enhancer/main/.github/screenshot/after.webp) |
+
+Setting button:
+
+![button](https://raw.githubusercontent.com/FishHawk/claude-prompt-enhancer/main/.github/screenshot/button.webp)
+
+Prompt command editor:
+
+![editor](https://raw.githubusercontent.com/FishHawk/claude-prompt-enhancer/main/.github/screenshot/editor.webp)
