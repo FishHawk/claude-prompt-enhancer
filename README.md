@@ -1,4 +1,4 @@
-Deprecated. The script is no longer maintained because my claude account is not working properly.
+# Deprecated. The script is no longer maintained because my claude account is not working properly.
 
 # Claude Prompt Enhancer
 
