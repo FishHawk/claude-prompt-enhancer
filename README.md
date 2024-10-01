@@ -1,3 +1,5 @@
+Deprecated. The script is no longer maintained because my claude account is not working properly.
+
 # Claude Prompt Enhancer
 
 English | [中文](/README.zh-CN.md)
